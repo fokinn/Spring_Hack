@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/new_flask.iml" filepath="$PROJECT_DIR$/.idea/new_flask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring_hack.iml" filepath="$PROJECT_DIR$/.idea/spring_hack.iml" />
     </modules>
   </component>
 </project>
