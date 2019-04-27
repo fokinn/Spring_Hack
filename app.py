@@ -8,7 +8,7 @@ app.secret_key = "super secret key"
 
 @app.route('/springhack')
 def springhack():
-    return render_template('add_new_member.html')
+    return render_template('member_login.html')
 
 @app.route('/springhack/add_member', methods=['POST'])
 def proceed_registration():
@@ -17,11 +17,9 @@ def proceed_registration():
     #last_name = register_data.get('last_name')
     return first_name
 
-@app.route('/springhack/login', methods = ['POST'])
-def proceed_login():
-    login_data = request.form
-    member_id = login_data.get('member_id')
-    return member_id
+@app.route('/springhack/account', methods = ['POST'])
+def account():
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run()
