@@ -8,17 +8,37 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!script src="hide_doc.js"><!/script>
-	<!script src="{{ url_for('static', filename='hide_doc.js') }}"><!/script>
+	
+  <script type="text/javascript">
+    function initText () { 
+        document.getElementById('avatar').src="{{ url_for('static', filename='styopa.png') }}";
+        document.getElementById('level').src ="{{ url_for('static', filename='levels_senior.png') }}";
+
+        document.getElementById('first_name').innerHTML = "Stepan Scherbakov";
+        document.getElementById('employeeRole').innerHTML = "Top man";
+        
+        document.getElementById('Strength').style.width = "20%";
+        document.getElementById('Agility').style.width = "30%";
+        document.getElementById('Health').style.width = "40%";
+
+        for (var i = 0; i<1000; i++) {
+              var node = document.createElement("LI");                 // Create a <li> node
+              var textnode = document.createTextNode("Skill"+i.toString());         // Create a text node
+              node.appendChild(textnode);
+              document.getElementById("Skills").appendChild(node);
+          }
+      }
+  </script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='account_style.css') }}">
+    <style>body{ background-color: #f0f0f5;}</style>
 </head>
-<body  bgcolor="#E6E1FA">
+<body onload="initText();" bgcolor="#E6E1FA">
 
 
 
 <div id="wrapper1" class="row">
-  <div id="member_pic"><img src="{{ url_for('static', filename='styopa.png') }}" style="float: left;" width="107" height="100"><br></div>
-  <div id="member_name"><h1>Stepan Backend</h1><font size="4">Senior developer</font></div>  
+  <div id="member_pic"><img id='avatar' style="float: left;" width="107" height="100"><br></div>
+  <div id="member_name"><h1 id="first_name"></h1><font size="4" id="employeeRole"></font></div>
 
   <div class="row" id="buttons">
       
@@ -38,7 +58,7 @@
   
 </div>
 
-<img src="{{ url_for('static', filename='levels_senior.png') }}" style="float: left;
+<img id="level"  style="float: left;
       position: relative;
       left: 1%;" />
 <br>
@@ -57,47 +77,26 @@
         <ul><h2>Status:</h2>
           <li>Strength:
               <div class="w3-light-grey">
-                  <div class="w3-red" style="height:24px;width:75%"></div>
+                  <div id="Strength" class="w3-red" style="height:24px;width:75%"></div>
               </div>
           </li>
           <li>Agility:
               <div class="w3-light-grey">
-                  <div class="w3-green" style="height:24px;width:22%"></div>
+                  <div id="Agility" class="w3-green" style="height:24px;width:22%"></div>
               </div>
           </li>
           <li>Health:
               <div class="w3-light-grey">
-                  <div class="w3-yellow" style="height:24px;width:22%"></div>
+                  <div id="Health" class="w3-yellow" style="height:24px;width:22%"></div>
               </div>
           </li>
         </ul>
     </div>
 
-    <div id="div2">
-     <ul><h2>Status:</h2>
-          <li>
-              <div class="w3-light-grey">
-                  <div class="w3-red" style="height:24px;width:75%"></div>
-              </div>
-          </li>
-          <li>
-              <div class="w3-light-grey">
-                  <div class="w3-green" style="height:24px;width:22%"></div>
-              </div>
-          </li>
-          <li>
-              <div class="w3-light-grey">
-                  <div class="w3-yellow" style="height:24px;width:22%"></div>
-              </div>
-          </li>
-        </ul>
-    </div>
-    <div id="div3"><h2>Skills:</h2>
-      <ul>
-            <li>Data science</li>
-            <li>TensorFlow</li>
-            <li>SQL</li>
-            <li>OTSOSiVT</li>
+    
+    <div id="div3" class="scroll"><h2>Skills:</h2>
+      <ul id = "Skills">
+            
         </ul>
 
     </div>
@@ -110,8 +109,9 @@
 <br>
 <br>
 <br>
+
 <div class="bottom" id="logout">
-    <a href="/springhack/login" class="btn btn-info" role="button">Log out</a>
+      <a href="/springhack/login" class="btn btn-info" role="button">Log out</a>
 </div>
 
 </body>

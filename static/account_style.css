@@ -1,3 +1,9 @@
+div.scroll {
+    height:100px;
+    overflow:scroll;
+    float: left;
+}
+
 #wrapper1 {
 	border: 0px solid blue;
 }
@@ -25,7 +31,7 @@
 #buttons {
 	float: right;
 	display: inline-block;
-    padding: 10px;
+    padding: 50px;
     width: auto;
     height:160px;
     border: 1px solid red;
@@ -38,8 +44,8 @@
     float: left;
     display: inline-block;
     padding: 10px;
-    width: auto;
-    height: auto;
+    width: 400px;
+    height: 250px;
     border: 1px solid red;
     
 }
@@ -47,18 +53,18 @@
 #div2 {
     display: inline-block;
     padding: 10px;
-    width: auto;
+    width: 400px;
     height:auto;
     border: 1px solid red;
     
 }
 
 #div3 {
-    float: right;
+    float: left;
     display: inline-block;
     padding: 10px;
-    width:160px;
-    height:auto;
+    width:300px;
+    height:250px;
     border: 1px solid green;
 }
 #logout {

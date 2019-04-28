@@ -30,28 +30,27 @@
         }
   </script>
 	
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='team_style.css') }}"">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='team_style.css') }}">
+    <style>body{ background-color: #f0f0f5;}</style>
 </head>
 <body onload="insertText();" bgcolor="#E6E1FA">
 
-
-
 <div id="upper_right_btns" class="row">
-  <div id="member_pic"><img src="styopa.png" style="float: left;" width="107" height="100"><br></div>
+  <div id="member_pic"><img src="{{ url_for('static', filename='team.jpg') }}" style="float: left;" width="107" height="100"><br></div>
   <div id="member_name"><h1 id="first_name"></h1><font id="team_descr" size="4"></font></div>  
 
   <div class="row" id="buttons">
       
       <div class="col-sm-3">
-        <a href="./play" class="btn btn-primary btn-lg" role="button">Rade</a>
+        <a href="/springhack" class="btn btn-primary btn-lg" role="button">Rade</a>
       </div>
         
       <div class="col-sm-5">
-        <a href="./team" class="btn btn-primary btn-lg" role="button">Leaderboard</a>
+        <a href="/springhack/leaderboard" class="btn btn-primary btn-lg" role="button">Leaderboard</a>
       </div>
 
       <div class="col-sm-4">
-        <a href="./Achievements" class="btn btn-primary btn-lg" role="button">Personage</a>
+        <a href="/springhack/account" class="btn btn-primary btn-lg" role="button">Personage</a>
       </div>  
       
   </div>

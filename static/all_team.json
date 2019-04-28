@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Springhack",
+        "participants": [
+            {
+                "id": 4,
+                "firstName": "Styopa",
+                "lastName": "Shch",
+                "employeeRole": "DEVELOPER"
+            },
+            {
+                "id": 5,
+                "firstName": "Egor",
+                "lastName": "Kon",
+                "employeeRole": "TESTER"
+            }
+        ],
+        "rating": 0.9
+    },
+    {
+        "id": 2,
+        "name": "Photolab",
+        "participants": [],
+        "rating": 0.8
+    }
+]
