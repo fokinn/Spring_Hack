@@ -1,0 +1,74 @@
+div.scroll {
+    height:100px;
+    overflow:scroll;
+    float: left;
+}
+
+#wrapper1 {
+	border: 0px solid blue;
+}
+#member_pic {
+	float: left;
+    display: inline-block;
+    padding: 10px;
+    width: 150px;
+    height:160px;
+    border: 1px solid red;
+}
+
+
+#member_name {
+	float: left;
+	display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    width: auto;
+    height:160px;
+    border: 1px solid red;
+}
+
+#buttons {
+	float: right;
+	display: inline-block;
+    padding: 50px;
+    width: auto;
+    height:160px;
+    border: 1px solid red;
+}
+
+#wrapper3 {
+    border: 0px solid blue;
+}
+#div1 {
+    float: left;
+    display: inline-block;
+    padding: 10px;
+    width: 400px;
+    height: 250px;
+    border: 1px solid red;
+    
+}
+
+#div2 {
+    display: inline-block;
+    padding: 10px;
+    width: 400px;
+    height:auto;
+    border: 1px solid red;
+    
+}
+
+#div3 {
+    float: left;
+    display: inline-block;
+    padding: 10px;
+    width:300px;
+    height:250px;
+    border: 1px solid green;
+}
+#logout {
+	position: absolute;
+  	bottom: 20px;
+  	left: 20px;
+}

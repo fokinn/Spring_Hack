@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>springHack - Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+  <script type="text/javascript">
+    function initText () { 
+        document.getElementById('avatar').src="{{ url_for('static', filename='styopa.png') }}";
+        document.getElementById('level').src ="{{ url_for('static', filename='levels_senior.png') }}";
+
+        document.getElementById('first_name').innerHTML = "Stepan Scherbakov";
+        document.getElementById('employeeRole').innerHTML = "Top man";
+        
+        document.getElementById('Strength').style.width = "20%";
+        document.getElementById('Agility').style.width = "30%";
+        document.getElementById('Health').style.width = "40%";
+
+        for (var i = 0; i<1000; i++) {
+              var node = document.createElement("LI");                 // Create a <li> node
+              var textnode = document.createTextNode("Skill"+i.toString());         // Create a text node
+              node.appendChild(textnode);
+              document.getElementById("Skills").appendChild(node);
+          }
+      }
+  </script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='account_style.css') }}">
+    <style>body{ background-color: #f0f0f5;}</style>
+</head>
+<body onload="initText();" bgcolor="#E6E1FA">
+
+
+
+<div id="wrapper1" class="row">
+  <div id="member_pic"><img id='avatar' style="float: left;" width="107" height="100"><br></div>
+  <div id="member_name"><h1 id="first_name"></h1><font size="4" id="employeeRole"></font></div>
+
+  <div class="row" id="buttons">
+      
+      <div class="col-sm-3">
+        <a href="./play" class="btn btn-primary btn-lg" role="button">Play</a>
+      </div>
+        
+      <div class="col-sm-3">
+        <a href="/springhack/team" class="btn btn-primary btn-lg" role="button">Team</a>
+      </div>
+
+      <div class="col-sm-3">
+        <a href="./Achievements" class="btn btn-primary btn-lg" role="button">Achievements</a>
+      </div>  
+      
+  </div>
+  
+</div>
+
+<img id="level"  style="float: left;
+      position: relative;
+      left: 1%;" />
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="wrapper2">
+  
+</div>
+<div id="wrapper3">
+    <div id="div1">
+        <ul><h2>Status:</h2>
+          <li>Strength:
+              <div class="w3-light-grey">
+                  <div id="Strength" class="w3-red" style="height:24px;width:75%"></div>
+              </div>
+          </li>
+          <li>Agility:
+              <div class="w3-light-grey">
+                  <div id="Agility" class="w3-green" style="height:24px;width:22%"></div>
+              </div>
+          </li>
+          <li>Health:
+              <div class="w3-light-grey">
+                  <div id="Health" class="w3-yellow" style="height:24px;width:22%"></div>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+    
+    <div id="div3" class="scroll"><h2>Skills:</h2>
+      <ul id = "Skills">
+            
+        </ul>
+
+    </div>
+</div>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="bottom" id="logout">
+      <a href="/springhack/login" class="btn btn-info" role="button">Log out</a>
+</div>
+
+</body>
+</html>
