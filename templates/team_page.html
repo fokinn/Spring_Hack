@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>springHack - Teams</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+        function insertText () {
+          document.getElementById('first_name').innerHTML = "Make Kvanty Great Again";
+          document.getElementById('team_descr').innerHTML = "Dream Team";
+
+          for (var i = 0;i<1000;i++) {
+              var node = document.createElement("LI");                 // Create a <li> node
+              var textnode = document.createTextNode("Member"+i.toString());         // Create a text node
+              node.appendChild(textnode);
+              document.getElementById("members_list").appendChild(node);
+          }
+
+          for (var i = 0; i<1000; i++) {
+              var node = document.createElement("LI");                 // Create a <li> node
+              var textnode = document.createTextNode("Submit_by_user"+i.toString());         // Create a text node
+              node.appendChild(textnode);
+              document.getElementById("battle_list").appendChild(node);
+          }
+          
+        }
+  </script>
+	
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='team_style.css') }}"">
+</head>
+<body onload="insertText();" bgcolor="#E6E1FA">
+
+
+
+<div id="upper_right_btns" class="row">
+  <div id="member_pic"><img src="styopa.png" style="float: left;" width="107" height="100"><br></div>
+  <div id="member_name"><h1 id="first_name"></h1><font id="team_descr" size="4"></font></div>  
+
+  <div class="row" id="buttons">
+      
+      <div class="col-sm-3">
+        <a href="./play" class="btn btn-primary btn-lg" role="button">Rade</a>
+      </div>
+        
+      <div class="col-sm-5">
+        <a href="./team" class="btn btn-primary btn-lg" role="button">Leaderboard</a>
+      </div>
+
+      <div class="col-sm-4">
+        <a href="./Achievements" class="btn btn-primary btn-lg" role="button">Personage</a>
+      </div>  
+      
+  </div>
+  
+</div>
+
+<div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar"
+      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+    </div>
+</div>
+
+<div id="wrapper3" >
+    <div id="member_text"><h1>Members:</h1>
+        <div id="div1" class="scroll">
+            <ol id="members_list"></ol>
+        </div>
+    </div>
+
+    <div id="battle_log"><h1>Battle log:</h1>
+        <div id="battle_content" class="scroll">
+            <ul id="battle_list"></ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+div.scroll {
+    height:100px;
+    overflow:scroll;
+    float: left;
+}
+
+li {
+    list-style: decimal-leading-zero;
+    font-size: 1.5em;
+    margin: 0 0 0 2em;
+}
+
+li span {
+    font-size: 0.25em;
+}
+
+#upper_right_btns {
+	border: 0px solid blue;
+}
+#member_pic {
+	float: left;
+    display: inline-block;
+    padding: 10px;
+    width: 150px;
+    height:160px;
+    border: 1px solid red;
+}
+
+
+#member_name {
+	float: left;
+	display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    width: auto;
+    height:160px;
+    border: 1px solid red;
+}
+
+#buttons {
+	float: right;
+	display: inline-block;
+    padding: 50px;
+    width: auto;
+    height:160px;
+    border: 1px solid red;
+}
+
+.progress{
+    padding: 50px;
+    height:150px;
+    text-align:center;
+}
+
+
+
+#wrapper3 {
+    border: 0px solid blue;
+    //height:250px;
+}
+#member_text {
+    float: left;
+    display: inline-block;
+    padding: 10px;
+}
+
+#div1 {
+    float: left;
+    display: inline-block;
+    padding: 20px;
+    width: 400px;
+    height: 250px;
+    border: 1px solid red;
+
+}
+
+#battle_log {
+    display: inline-block;
+    padding: 10px;
+    width: 800px;
+    height: auto;
+    border: 1px solid red;
+
+}
+
+#battle_content {
+    float: left;
+    display: inline-block;
+    padding: 40px;
+    width: 740px;
+    height: 250px;
+}

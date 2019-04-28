@@ -18,7 +18,9 @@ def springhack_login():
 def springhack_account():
     return render_template("account_page.html")
 
-
+@app.route('/springhack/team')
+def springhack_team():
+    return render_template("team_page.html")
 
 if __name__ == '__main__':
     app.run()
